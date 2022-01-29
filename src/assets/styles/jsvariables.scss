@@ -1,0 +1,55 @@
+@import "~bootstrap/scss/functions";
+@import "variables";
+
+:export {
+  white: $white;
+  gray100: $gray-100;
+  gray200: $gray-200;
+  gray300: $gray-300;
+  gray400: $gray-400;
+  gray500: $gray-500;
+  gray600: $gray-600;
+  gray700: $gray-700;
+  gray800: $gray-800;
+  gray900: $gray-900;
+  black: $black;
+
+  blue: $blue;
+  orange: $orange;
+  peach: $peach;
+  pink: $pink;
+  red: $red;
+  maroon: $maroon;
+  yellow: $yellow;
+  green: $green;
+  dark-green: $dark-green;
+  brown: $brown;
+  teal: $teal;
+
+  primary: $primary;
+  secondary: $secondary;
+  success: $success;
+  info: $info;
+  warning: $warning;
+  danger: $danger;
+  light: $light;
+  dark: $dark;
+  forrest: $forrest;
+  bubblegum: $bubblegum;
+  peach: $peach;
+
+  spacer: $spacer;
+
+  gridBreakpointXs: map-get($grid-breakpoints, "xs");
+  gridBreakpointSm: map-get($grid-breakpoints, "sm");
+  gridBreakpointMd: map-get($grid-breakpoints, "md");
+  gridBreakpointLg: map-get($grid-breakpoints, "lg");
+  gridBreakpointXl: map-get($grid-breakpoints, "xl");
+
+  fontFamilySansSerif: $font-family-sans-serif;
+  fontFamilyMonoSpace: $font-family-monospace;
+  fontFamilyBase: $font-family-base;
+
+  fontSizeLg: $font-size-lg;
+  fontSizeSm: $font-size-sm;
+}
