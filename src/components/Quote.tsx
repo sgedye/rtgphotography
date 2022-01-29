@@ -11,16 +11,16 @@ export const Quote = ({ quote, author }: QuoteProps): JSX.Element => {
   console.log(theme, "is undefined");
   return (
     <article
-      style={{
-        ["--border-color" as string]: "red",
-      }}
+      className={cx(
+        "mx-3 ps-3",
+        css`
+          border-left: 0.375rem solid red;
+        `
+      )}
     >
       <blockquote
         className={css`
           font-weight: 800;
-          border-left: 0.375rem solid var(--border-color);
-          padding-left: 1rem;
-          margin-left: 1rem;
         `}
       >
         {quote}
@@ -31,6 +31,7 @@ export const Quote = ({ quote, author }: QuoteProps): JSX.Element => {
             "d-block text-end",
             css`
               margin-top: -1rem;
+              margin-bottom: 1rem;
             `
           )}
         >

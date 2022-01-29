@@ -18,24 +18,22 @@ export default function Index() {
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">
-          {slides.map((slide, idx) => (
+          {slides.map(({ slide, id }) => (
             <button
-              key={idx}
+              key={id}
               type="button"
               data-bs-target="#carousel-homepage"
-              data-bs-slide-to={`${idx}`}
-              className="active"
+              data-bs-slide-to={`${id}`}
+              className={id === 0 ? "active" : ""}
               aria-current="true"
-              aria-label={`Slide ${idx + 1}`}
+              aria-label={`Slide ${id + 1}`}
             ></button>
           ))}
         </div>
         <div className="carousel-inner">
-          {slides.map((slide, idx) => (
-            <div
-              key={idx}
-              className={cx("carousel-item", idx === 0 && "active")}
-            >
+          {/* TODO - Create mobile versions of these images and use a picture element to choose */}
+          {slides.map(({ slide, id }) => (
+            <div key={id} className={cx("carousel-item", id === 0 && "active")}>
               <img src={slide} className="d-block w-100" alt="..." />
             </div>
           ))}
@@ -69,4 +67,25 @@ export default function Index() {
   );
 }
 
-const slides = [slide1, slide2, slide3, slide4, slide5];
+const slides = [
+  {
+    id: 0,
+    slide: slide1,
+  },
+  {
+    id: 1,
+    slide: slide2,
+  },
+  {
+    id: 2,
+    slide: slide3,
+  },
+  {
+    id: 3,
+    slide: slide4,
+  },
+  {
+    id: 4,
+    slide: slide5,
+  },
+];

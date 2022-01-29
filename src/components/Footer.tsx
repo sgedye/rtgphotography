@@ -1,6 +1,17 @@
+import { css, cx } from "linaria";
+
 export const Footer = () => {
   return (
-    <footer id="footer" className="container-fluid bg-secondary py-3">
+    <footer
+      id="footer"
+      className={cx(
+        "container-fluid py-3",
+        css`
+          border-top: 1px solid black;
+          background-color: #555555;
+        `
+      )}
+    >
       <div className="container text-white">
         © {new Date().getFullYear()} - RTG Photography - built with{" "}
         <a

@@ -4,14 +4,18 @@ import { cx, css } from "linaria";
 import { Routes } from "../models/Routes";
 
 export const Header = ({ siteTitle }: { siteTitle: string }) => (
-  <header id="header" className="container-fluid bg-primary py-3">
+  <header
+    id="header"
+    className="container-fluid bg-primary py-3"
+    style={{ borderBottom: "1px solid #0000ff" }}
+  >
     <div className="container">
-      <nav className="navbar navbar-expand-lg navbar-light px-0">
+      <nav className="navbar navbar-expand-lg navbar-dark px-0">
         <h1>
           <Link
             to="/"
             className={cx(
-              "navbar-brand text-white",
+              "navbar-brand",
               css`
                 text-decoration: "none";
               `
@@ -35,25 +39,38 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link
-                className="nav-link active"
+                className="nav-link"
                 aria-current="page"
                 to={Routes.Home}
+                activeStyle={{ color: "#ffffff" }}
               >
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={Routes.About}>
+              <Link
+                className="nav-link"
+                to={Routes.About}
+                activeStyle={{ color: "#ffffff" }}
+              >
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={Routes.Galleries}>
+              <Link
+                className="nav-link"
+                to={Routes.Galleries}
+                activeStyle={{ color: "#ffffff" }}
+              >
                 Galleries
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={Routes.Contact}>
+              <Link
+                className="nav-link"
+                to={Routes.Contact}
+                activeStyle={{ color: "#ffffff" }}
+              >
                 Contact
               </Link>
             </li>
