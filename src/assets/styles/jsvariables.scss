@@ -1,5 +1,6 @@
-@import "~bootstrap/scss/functions";
-@import "variables";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "_variables";
 
 :export {
   white: $white;
@@ -14,17 +15,8 @@
   gray900: $gray-900;
   black: $black;
 
-  blue: $blue;
-  orange: $orange;
-  peach: $peach;
   pink: $pink;
-  red: $red;
-  maroon: $maroon;
-  yellow: $yellow;
-  green: $green;
-  dark-green: $dark-green;
-  brown: $brown;
-  teal: $teal;
+  orange: $orange;
 
   primary: $primary;
   secondary: $secondary;
@@ -34,9 +26,6 @@
   danger: $danger;
   light: $light;
   dark: $dark;
-  forrest: $forrest;
-  bubblegum: $bubblegum;
-  peach: $peach;
 
   spacer: $spacer;
 

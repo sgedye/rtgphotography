@@ -35,37 +35,26 @@ $grays: map-merge(
 );
 
 $blue: #007bff !default;
-$orange: #fd7e14 !default;
-
-$peach: #f8a48d !default;
-$pink: #edb0d0 !default;
-$red: #cd163f !default;
 $maroon: #640031 !default;
-$yellow: #ffcb58 !default;
 $green: #91982c !default;
-$dark-green: #004023 !default;
-$brown: #a74e15 !default;
-$teal: #93d0ac !default;
+$teal: #0dcaf0 !default;
+$yellow: #ffcb58 !default;
+$red: #cd163f !default;
 
-$aqua: #82dbb5 !default;
-$svg-pink: #fdaf9b !default;
+$pink: #edb0d0 !default;
+$orange: #fd7e14 !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
   (
     "blue": $blue,
-    "peach": $peach,
     "pink": $pink,
     "red": $red,
     "maroon": $maroon,
     "orange": $orange,
     "yellow": $yellow,
     "green": $green,
-    "dark-green": $dark-green,
-    "brown": $brown,
-    "teal": $teal,
-    "aqua": $aqua,
     "white": $white,
     "gray": $gray-600,
     "gray-dark": $gray-800,
@@ -73,18 +62,14 @@ $colors: map-merge(
   $colors
 );
 
-$primary: $red !default;
+$primary: $blue !default;
 $secondary: $maroon !default;
 $success: $green !default;
 $info: $teal !default;
 $warning: $yellow !default;
-$danger: $brown !default;
+$danger: $red !default;
 $light: $white !default;
 $dark: $gray-900 !default;
-$forrest: $dark-green !default;
-$bubblegum: $pink !default;
-$peach: $peach !default;
-$aqua: $aqua !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -98,10 +83,6 @@ $theme-colors: map-merge(
     "danger": $danger,
     "light": $light,
     "dark": $dark,
-    "forrest": $forrest,
-    "bubblegum": $bubblegum,
-    "peach": $peach,
-    "aqua": $aqua,
   ),
   $theme-colors
 );
@@ -151,7 +132,7 @@ $spacers: (
 );
 
 $enable-negative-margins: true !default;
-// $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null);
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null);
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: () !default;

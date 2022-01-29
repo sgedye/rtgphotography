@@ -10,17 +10,10 @@ export type Styles = {
   gray800: string;
   gray900: string;
   black: string;
-  blue: string;
-  orange: string;
-  peach: string;
+
   pink: string;
-  red: string;
-  maroon: string;
-  yellow: string;
-  green: string;
-  "dark-green": string;
-  brown: string;
-  teal: string;
+  orange: string;
+
   primary: string;
   secondary: string;
   success: string;
@@ -29,8 +22,7 @@ export type Styles = {
   danger: string;
   light: string;
   dark: string;
-  forrest: string;
-  bubblegum: string;
+
   spacer: string;
   gridBreakpointXs: string;
   gridBreakpointSm: string;
