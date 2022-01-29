@@ -48,12 +48,12 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={Routes.Contact}>
+              <Link className="nav-link" to={Routes.Galleries}>
                 Galleries
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={Routes.Galleries}>
+              <Link className="nav-link" to={Routes.Contact}>
                 Contact
               </Link>
             </li>

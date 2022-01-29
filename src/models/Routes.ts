@@ -8,6 +8,10 @@ export enum Routes {
   Galleries = "/galleries",
   Contact = "/contact",
 
+  // Galleries
+  Madagascar = "/madagascar",
+  Ethiopia = "/ethiopia",
+
   // Error
   Error = "/error",
   //404?
