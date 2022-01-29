@@ -4,7 +4,7 @@ import { cx, css } from "linaria";
 import { Routes } from "../models/Routes";
 
 export const Header = ({ siteTitle }: { siteTitle: string }) => (
-  <header id="header" className="container-fluid bg-primary py-3 mb-5">
+  <header id="header" className="container-fluid bg-primary py-3">
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light px-0">
         <h1>

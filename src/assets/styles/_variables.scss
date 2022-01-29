@@ -1077,14 +1077,14 @@ $carousel-control-color: $white !default;
 $carousel-control-width: 15% !default;
 $carousel-control-opacity: 0.5 !default;
 $carousel-control-hover-opacity: 0.9 !default;
-$carousel-control-transition: opacity 0.15s ease !default;
+$carousel-control-transition: opacity 0.3s ease !default;
 
 $carousel-indicator-width: 30px !default;
 $carousel-indicator-height: 3px !default;
 $carousel-indicator-hit-area-height: 10px !default;
 $carousel-indicator-spacer: 3px !default;
 $carousel-indicator-active-bg: $white !default;
-$carousel-indicator-transition: opacity 0.6s ease !default;
+$carousel-indicator-transition: opacity 1.2s ease-in-out !default;
 
 $carousel-caption-width: 70% !default;
 $carousel-caption-color: $white !default;
@@ -1102,7 +1102,7 @@ $carousel-control-next-icon-bg: str-replace(
   "%23"
 ) !default;
 
-$carousel-transition-duration: 0.6s !default;
+$carousel-transition-duration: 1.2s !default;
 $carousel-transition: transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 
 // Spinners
