@@ -1,3 +1,4 @@
-export * from "./header";
+export * from "./Header";
+export * from "./Footer";
 export * from "./layout";
-export * from "./seo";
+export * from "./SEO";
