@@ -1,8 +1,6 @@
-import * as React from "react";
 import { Link } from "gatsby";
 
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import { Layout, Seo } from "../components";
 
 interface SSRProps {
   serverData: {
@@ -10,7 +8,7 @@ interface SSRProps {
   };
 }
 
-const UsingSSR = ({ serverData }: SSRProps) => {
+export const UsingSSR = ({ serverData }: SSRProps) => {
   return (
     <Layout>
       <Seo title="Using SSR" />
@@ -32,8 +30,6 @@ const UsingSSR = ({ serverData }: SSRProps) => {
     </Layout>
   );
 };
-
-export default UsingSSR;
 
 export async function getServerData() {
   try {
