@@ -1,6 +1,6 @@
 import { css, cx } from "linaria";
 
-import theme from "../assets/styles/exports.scss";
+import { theme } from "../theme";
 
 interface QuoteProps {
   quote: string;
@@ -8,13 +8,12 @@ interface QuoteProps {
 }
 
 export const Quote = ({ quote, author }: QuoteProps): JSX.Element => {
-  console.log(theme, "is undefined");
   return (
     <article
       className={cx(
         "mx-3 ps-3",
         css`
-          border-left: 0.375rem solid red;
+          border-left: 0.375rem solid ${theme.danger};
         `
       )}
     >

@@ -1,11 +1,11 @@
 import { cx } from "linaria";
 import { Layout, Seo } from "../components";
 
-import slide1 from "../assets/images/galleries/madagascar/Madagascar001.jpg";
-import slide2 from "../assets/images/galleries/madagascar/Madagascar002.jpg";
-import slide3 from "../assets/images/galleries/madagascar/Madagascar003.jpg";
-import slide4 from "../assets/images/galleries/madagascar/Madagascar004.jpg";
-import slide5 from "../assets/images/galleries/madagascar/Madagascar005.jpg";
+import slide1 from "../images/galleries/madagascar/Madagascar001.jpg";
+import slide2 from "../images/galleries/madagascar/Madagascar002.jpg";
+import slide3 from "../images/galleries/madagascar/Madagascar003.jpg";
+import slide4 from "../images/galleries/madagascar/Madagascar004.jpg";
+import slide5 from "../images/galleries/madagascar/Madagascar005.jpg";
 
 export default function Index() {
   return (

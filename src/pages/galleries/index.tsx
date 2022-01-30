@@ -5,9 +5,9 @@ import { Routes } from "../../models/Routes";
 import { Layout, Seo } from "../../components";
 import { css, cx } from "linaria";
 
-import mad01 from "../../assets/images/galleries/madagascar/Madagascar001.jpg";
-import mad02 from "../../assets/images/galleries/madagascar/Madagascar002.jpg";
-import mad03 from "../../assets/images/galleries/madagascar/Madagascar003.jpg";
+import mad01 from "../../images/galleries/madagascar/Madagascar001.jpg";
+import mad02 from "../../images/galleries/madagascar/Madagascar002.jpg";
+import mad03 from "../../images/galleries/madagascar/Madagascar003.jpg";
 
 type GalleryListItem = {
   title: string;
@@ -64,10 +64,7 @@ export default function Index() {
       <Seo title="Galleries" />
       <div className="row">
         {GalleryList.map(gallery => (
-          <div
-            key={gallery.title}
-            className="col-12 col-sm-6 col-lg-4 col-xl-3 mb-3"
-          >
+          <div key={gallery.title} className="col-12 col-md-6 col-xl-4 mb-3">
             <GalleryCover {...gallery} />
           </div>
         ))}
@@ -93,7 +90,7 @@ const GalleryList: GalleryListItem[] = [
     images: [mad01, mad02],
   },
   {
-    title: "tet",
+    title: "Ethiopia",
     route: Routes.Ethiopia,
     images: [mad02],
   },
@@ -113,7 +110,7 @@ const GalleryList: GalleryListItem[] = [
     images: [mad03],
   },
   {
-    title: "Madagascar",
+    title: "Madalllgascar",
     route: Routes.Ethiopia,
     images: [mad02],
   },

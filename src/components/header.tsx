@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import { cx, css } from "linaria";
 
+import { theme } from "../theme";
 import { Routes } from "../models/Routes";
 
 export const Header = ({ siteTitle }: { siteTitle: string }) => (
@@ -42,7 +43,7 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
                 className="nav-link"
                 aria-current="page"
                 to={Routes.Home}
-                activeStyle={{ color: "#ffffff" }}
+                activeStyle={{ color: theme.white }}
               >
                 Home
               </Link>
@@ -51,7 +52,7 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
               <Link
                 className="nav-link"
                 to={Routes.About}
-                activeStyle={{ color: "#ffffff" }}
+                activeStyle={{ color: theme.white }}
               >
                 About
               </Link>
@@ -60,7 +61,7 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
               <Link
                 className="nav-link"
                 to={Routes.Galleries}
-                activeStyle={{ color: "#ffffff" }}
+                activeStyle={{ color: theme.white }}
               >
                 Galleries
               </Link>
@@ -69,7 +70,7 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
               <Link
                 className="nav-link"
                 to={Routes.Contact}
-                activeStyle={{ color: "#ffffff" }}
+                activeStyle={{ color: theme.white }}
               >
                 Contact
               </Link>
