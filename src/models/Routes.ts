@@ -11,6 +11,11 @@ export enum Routes {
   // Galleries
   Madagascar = "/madagascar",
   Ethiopia = "/ethiopia",
+  Cuba = "/cuba",
+  Landscapes = "/landscapes",
+  Portraits = "/portraits",
+  MyanmarPortraits = "/myanmar-portraits",
+  BlackAndWhites = "/black-and-whites",
 
   // Error
   Error = "/error",

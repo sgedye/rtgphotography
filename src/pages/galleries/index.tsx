@@ -95,23 +95,28 @@ const GalleryList: GalleryListItem[] = [
     images: [mad02],
   },
   {
-    title: "Madassssgascar",
-    route: Routes.Ethiopia,
+    title: "Cuba",
+    route: Routes.Cuba,
     images: [mad03, mad02],
   },
   {
-    title: "Madaasdfgascar",
-    route: Routes.Ethiopia,
+    title: "Landscapes",
+    route: Routes.Landscapes,
     images: [mad01, mad02],
   },
   {
-    title: "asdff",
-    route: Routes.Ethiopia,
+    title: "Portraits",
+    route: Routes.Portraits,
     images: [mad03],
   },
   {
-    title: "Madalllgascar",
-    route: Routes.Ethiopia,
+    title: "Myanmar Portraits",
+    route: Routes.MyanmarPortraits,
+    images: [mad02],
+  },
+  {
+    title: "Black & Whites",
+    route: Routes.BlackAndWhites,
     images: [mad02],
   },
 ];
