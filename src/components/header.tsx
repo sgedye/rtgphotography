@@ -4,6 +4,8 @@ import { cx, css } from "linaria";
 import { theme } from "../theme";
 import { Routes } from "../models/Routes";
 
+import RtgLogo from "../images/branding/logo.svg";
+
 export const Header = ({ siteTitle }: { siteTitle: string }) => (
   <header
     id="header"
@@ -12,17 +14,18 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
   >
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-dark px-0">
-        <h1>
+        <h1 className="mb-0">
           <Link
             to="/"
             className={cx(
-              "navbar-brand",
+              "d-flex align-items-center navbar-brand py-0",
               css`
                 text-decoration: "none";
               `
             )}
           >
-            {siteTitle}
+            <RtgLogo width={80} height={80} />
+            <span className="d-none d-sm-block ms-3">{siteTitle}</span>
           </Link>
         </h1>
         <button
