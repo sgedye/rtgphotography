@@ -46,13 +46,13 @@ export default function About() {
             (Burma), Ethiopia and Cuba.
           </p>
         </div>
-        <div className="col-12 col-md-4 mb-3">
+        <div className="col-12 col-md-4 mx-auto mb-3">
           <StaticImage
-            src="../images/gatsby-astronaut.png"
+            src="../images/gfx/the-artist.png"
             width={300}
             quality={95}
             formats={["auto", "webp", "avif"]}
-            alt="A Gatsby astronaut"
+            alt="The artist"
             className="img-fluid"
           />
         </div>
