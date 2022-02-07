@@ -1,10 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Default Starter",
-    description:
-      "Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.",
-    author: "@gatsbyjs",
-    siteUrl: "https://gatsbystarterdefaultsource.gatsbyjs.io/",
+    title: "RTG Photography",
+    description: "RTG Photography",
+    author: "Shaun Gedye",
+    siteUrl: "https://www.rtgphotography.com.au",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -20,6 +19,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-sass",
     "gatsby-plugin-typescript",
+    "gatsby-plugin-react-svg",
     "gatsby-plugin-linaria", // linaria must come after typescript
     {
       resolve: "gatsby-plugin-manifest",
@@ -32,7 +32,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: "#663399",
         display: "minimal-ui",
-        icon: "src/images/gatsby-icon.png", // This path is relative to the root of the site.
+        icon: "src/images/branding/favicon.png", // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

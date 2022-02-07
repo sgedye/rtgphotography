@@ -11,7 +11,11 @@ import { Footer, Header } from ".";
 
 import "../assets/styles/main.scss";
 
-export const Layout = ({ children }: { children: React.ReactNode }) => {
+interface LayoutProps {
+  title?: string;
+  children: React.ReactNode;
+}
+export const Layout = ({ title, children }: LayoutProps): JSX.Element => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,7 +29,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || "RTG Photography"} />
-      <main id="main" className="container">
+      <main id="main" className={title === "home" ? "" : "container mt-5"}>
         {children}
       </main>
       <Footer />
