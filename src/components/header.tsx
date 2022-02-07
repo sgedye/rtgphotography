@@ -69,15 +69,6 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
                 Galleries
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                className="nav-link"
-                to={Routes.Contact}
-                activeStyle={{ color: theme.white }}
-              >
-                Contact
-              </Link>
-            </li>
           </ul>
         </div>
       </nav>
