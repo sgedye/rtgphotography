@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import { Routes } from "../../models/Routes";
+import { Routes } from "../../models";
 import { theme } from "../../theme";
 
 import { Layout, Seo } from "../../components";

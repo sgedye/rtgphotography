@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Layout, Loading, Seo } from "../../components";
 import type { GalleryData } from "../../@types/gallery-types";
 
-import { Routes } from "../../models/Routes";
+import { Routes } from "../../models";
 
 export default function Magagascar({ data }: { data: GalleryData }) {
   return (
