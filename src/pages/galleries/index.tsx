@@ -34,13 +34,13 @@ import blk01 from "../../images/galleries/covers/BlackAndWhite001.jpg";
 import blk02 from "../../images/galleries/covers/BlackAndWhite002.jpg";
 import blk03 from "../../images/galleries/covers/BlackAndWhite003.jpg";
 
-type GalleryListItem = {
+export type GalleryListItem = {
   title: string;
   route: string;
   images: string[];
 };
 
-const GalleryCover = ({ title, route, images }: GalleryListItem) => {
+export const GalleryCover = ({ title, route, images }: GalleryListItem) => {
   return (
     <Link to={`${Routes.Galleries}${route}`}>
       <figure

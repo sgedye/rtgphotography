@@ -19,6 +19,19 @@ import extraWideImage3 from "../images/gfx/hero-carousel/rtgphoto-003-wide.jpg";
 import extraWideImage4 from "../images/gfx/hero-carousel/rtgphoto-004-wide.jpg";
 import extraWideImage5 from "../images/gfx/hero-carousel/rtgphoto-005-wide.jpg";
 
+import eth01 from "../images/galleries/covers/Ethiopia001.jpg";
+import eth02 from "../images/galleries/covers/Ethiopia002.jpg";
+import eth03 from "../images/galleries/covers/Ethiopia003.jpg";
+import portI01 from "../images/galleries/covers/PortraitsI001.jpg";
+import portI02 from "../images/galleries/covers/PortraitsI002.jpg";
+import portI03 from "../images/galleries/covers/PortraitsI003.jpg";
+import cub01 from "../images/galleries/covers/Cuba001.jpg";
+import cub02 from "../images/galleries/covers/Cuba002.jpg";
+import cub03 from "../images/galleries/covers/Cuba003.jpg";
+
+import { GalleryCover, GalleryListItem } from "./galleries";
+import { Routes } from "../models";
+
 export default function Index() {
   return (
     <Layout title="home">
@@ -26,7 +39,7 @@ export default function Index() {
 
       <div
         id="carousel-homepage"
-        className="carousel slide"
+        className="carousel slide mb-4"
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">
@@ -51,7 +64,7 @@ export default function Index() {
               >
                 <picture>
                   <source srcSet={extraWideImage} media="(min-width: 1200px" />
-                  <source srcSet={desktopImage} media="(min-width: 600px" />
+                  <source srcSet={desktopImage} media="(min-width: 768px" />
                   <img
                     src={mobileImage}
                     className="w-100 img-fluid mx-auto"
@@ -86,6 +99,17 @@ export default function Index() {
           ></span>
           <span className="visually-hidden">Next</span>
         </button>
+      </div>
+
+      <div className="row mb-4 px-4">
+        {GalleryList.map(gallery => (
+          <div
+            key={gallery.title}
+            className="col-12 col-md-6 col-xl-4 p-4 mb-3"
+          >
+            <GalleryCover {...gallery} />
+          </div>
+        ))}
       </div>
     </Layout>
   );
@@ -126,5 +150,23 @@ const carouselImages = [
     mobileImage: mobileImage5,
     desktopImage: desktopImage5,
     extraWideImage: extraWideImage5,
+  },
+];
+
+const GalleryList: GalleryListItem[] = [
+  {
+    title: "Ethiopia",
+    route: Routes.Ethiopia,
+    images: [eth03, eth02, eth01],
+  },
+  {
+    title: "Portraits",
+    route: Routes.Portraits,
+    images: [portI03, portI02, portI01],
+  },
+  {
+    title: "Cuba",
+    route: Routes.Cuba,
+    images: [cub03, cub02, cub01],
   },
 ];
