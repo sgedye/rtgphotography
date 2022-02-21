@@ -1,7 +1,6 @@
-import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { Layout, Quote, Seo } from "../components";
+import { Layout, Quote, Seo } from "~/components";
 
 export default function About() {
   return (
@@ -46,9 +45,9 @@ export default function About() {
             (Burma), Ethiopia and Cuba.
           </p>
         </div>
-        <div className="col-12 col-md-4 mx-auto mb-3">
+        <div className="col-12 col-md-4 text-center mb-3">
           <StaticImage
-            src="../images/gfx/the-artist.png"
+            src="~/images/gfx/the-artist.png"
             width={300}
             quality={95}
             formats={["auto", "webp", "avif"]}

@@ -7,7 +7,6 @@ module.exports = {
   entry: {
     main: [
       path.resolve(__dirname, "../src/index.tsx"),
-      // path.resolve(__dirname, "../src/vendor.tsx"),
     ],
   },
   mode: isProd ? "production" : "development",
@@ -48,11 +47,5 @@ module.exports = {
         include: [path.resolve(__dirname, "../src/assets")],
       },
     ],
-  },
-  resolve: {
-    alias: {
-      "~": path.resolve(__dirname, "../src"),
-    },
-    extensions: [".tsx", ".ts", ".jsx", ".js"],
   },
 };

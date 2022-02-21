@@ -1,10 +1,10 @@
 import { Link } from "gatsby";
 import { cx, css } from "linaria";
 
-import { theme } from "../theme";
-import { Routes } from "../models";
+import { theme } from "~/theme";
+import { Routes } from "~/models";
 
-import RtgLogo from "../images/branding/logo.svg";
+import RtgLogo from "~/images/branding/logo.svg";
 
 export const Header = ({ siteTitle }: { siteTitle: string }) => (
   <header
@@ -43,7 +43,7 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link
-                className="nav-link"
+                className="lead nav-link"
                 aria-current="page"
                 to={Routes.Home}
                 activeStyle={{ color: theme.white }}
@@ -53,7 +53,7 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
             </li>
             <li className="nav-item">
               <Link
-                className="nav-link"
+                className="lead nav-link"
                 to={Routes.About}
                 activeStyle={{ color: theme.white }}
               >
@@ -62,7 +62,7 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
             </li>
             <li className="nav-item">
               <Link
-                className="nav-link"
+                className="lead nav-link"
                 to={Routes.Galleries}
                 activeStyle={{ color: theme.white }}
               >

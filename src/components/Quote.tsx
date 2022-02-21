@@ -1,6 +1,6 @@
 import { css, cx } from "linaria";
 
-import { theme } from "../theme";
+import { theme } from "~/theme";
 
 interface QuoteProps {
   quote: string;
@@ -11,9 +11,10 @@ export const Quote = ({ quote, author }: QuoteProps): JSX.Element => {
   return (
     <article
       className={cx(
-        "mx-3 ps-3",
+        "mx-3 mb-3 ps-3",
         css`
-          border-left: 0.375rem solid ${theme.danger};
+          color: ${theme.secondary};
+          border-left: 0.375rem solid ${theme.secondary};
         `
       )}
     >
@@ -29,8 +30,7 @@ export const Quote = ({ quote, author }: QuoteProps): JSX.Element => {
           className={cx(
             "d-block text-end",
             css`
-              margin-top: -1rem;
-              margin-bottom: 1rem;
+              margin: -2rem 2rem 0 0;
             `
           )}
         >

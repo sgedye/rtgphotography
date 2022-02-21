@@ -7,9 +7,9 @@
 
 import { useStaticQuery, graphql } from "gatsby";
 
-import { Footer, Header } from ".";
+import { Footer, Header } from "~/components";
 
-import "../assets/styles/main.scss";
+import "~/assets/styles/main.scss";
 
 interface LayoutProps {
   title?: string;

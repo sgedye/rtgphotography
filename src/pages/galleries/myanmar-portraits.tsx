@@ -1,10 +1,10 @@
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import { Layout, Loading, Seo } from "../../components";
-import type { GalleryData } from "../../@types/gallery-types";
+import { Layout, Loading, Seo } from "~/components";
+import type { GalleryData } from "~/@types/gallery-types";
 
-import { Routes } from "../../models";
+import { Routes } from "~/models";
 
 export default function MyanmarPortraits({ data }: { data: GalleryData }) {
   return (

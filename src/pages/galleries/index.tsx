@@ -1,38 +1,38 @@
 import { Link } from "gatsby";
-import { Routes } from "../../models";
-import { theme } from "../../theme";
-
-import { Layout, Seo } from "../../components";
 import { css, cx } from "linaria";
 
+import { Layout, Seo } from "~/components";
+import { Routes } from "~/models";
+import { theme } from "~/theme";
+
 // Cover Images
-import mad01 from "../../images/galleries/covers/Madagascar001.jpg";
-import mad02 from "../../images/galleries/covers/Madagascar002.jpg";
-import mad03 from "../../images/galleries/covers/Madagascar003.jpg";
+import mad01 from "~/images/galleries/covers/Madagascar001.jpg";
+import mad02 from "~/images/galleries/covers/Madagascar002.jpg";
+import mad03 from "~/images/galleries/covers/Madagascar003.jpg";
 
-import eth01 from "../../images/galleries/covers/Ethiopia001.jpg";
-import eth02 from "../../images/galleries/covers/Ethiopia002.jpg";
-import eth03 from "../../images/galleries/covers/Ethiopia003.jpg";
+import eth01 from "~/images/galleries/covers/Ethiopia001.jpg";
+import eth02 from "~/images/galleries/covers/Ethiopia002.jpg";
+import eth03 from "~/images/galleries/covers/Ethiopia003.jpg";
 
-import cub01 from "../../images/galleries/covers/Cuba001.jpg";
-import cub02 from "../../images/galleries/covers/Cuba002.jpg";
-import cub03 from "../../images/galleries/covers/Cuba003.jpg";
+import cub01 from "~/images/galleries/covers/Cuba001.jpg";
+import cub02 from "~/images/galleries/covers/Cuba002.jpg";
+import cub03 from "~/images/galleries/covers/Cuba003.jpg";
 
-import lan01 from "../../images/galleries/covers/Landscapes001.jpg";
-import lan02 from "../../images/galleries/covers/Landscapes002.jpg";
-import lan03 from "../../images/galleries/covers/Landscapes003.jpg";
+import lan01 from "~/images/galleries/covers/Landscapes001.jpg";
+import lan02 from "~/images/galleries/covers/Landscapes002.jpg";
+import lan03 from "~/images/galleries/covers/Landscapes003.jpg";
 
-import portI01 from "../../images/galleries/covers/PortraitsI001.jpg";
-import portI02 from "../../images/galleries/covers/PortraitsI002.jpg";
-import portI03 from "../../images/galleries/covers/PortraitsI003.jpg";
+import portI01 from "~/images/galleries/covers/PortraitsI001.jpg";
+import portI02 from "~/images/galleries/covers/PortraitsI002.jpg";
+import portI03 from "~/images/galleries/covers/PortraitsI003.jpg";
 
-import portII01 from "../../images/galleries/covers/PortraitsII001.jpg";
-import portII02 from "../../images/galleries/covers/PortraitsII002.jpg";
-import portII03 from "../../images/galleries/covers/PortraitsII003.jpg";
+import portII01 from "~/images/galleries/covers/PortraitsII001.jpg";
+import portII02 from "~/images/galleries/covers/PortraitsII002.jpg";
+import portII03 from "~/images/galleries/covers/PortraitsII003.jpg";
 
-import blk01 from "../../images/galleries/covers/BlackAndWhite001.jpg";
-import blk02 from "../../images/galleries/covers/BlackAndWhite002.jpg";
-import blk03 from "../../images/galleries/covers/BlackAndWhite003.jpg";
+import blk01 from "~/images/galleries/covers/BlackAndWhite001.jpg";
+import blk02 from "~/images/galleries/covers/BlackAndWhite002.jpg";
+import blk03 from "~/images/galleries/covers/BlackAndWhite003.jpg";
 
 export type GalleryListItem = {
   title: string;
