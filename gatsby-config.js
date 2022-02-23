@@ -5,6 +5,7 @@ module.exports = {
     author: "Shaun Gedye",
     siteUrl: "https://www.rtgphotography.com.au",
   },
+  trailingSlash: "never",
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
