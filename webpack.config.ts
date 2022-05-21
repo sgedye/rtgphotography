@@ -25,7 +25,14 @@ module.exports = {
       },
       {
         test: /\.(js|ts)x?$/i,
-        use: ["babel-loader", "ts-loader"],
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env"],
+              plugins: ["@babel/plugin-proposal-class-properties"]
+            }
+          }, "ts-loader"],
         include: [path.resolve(__dirname, "../src")],
       },
       {

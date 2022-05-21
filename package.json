@@ -27,6 +27,7 @@
     "@babel/preset-typescript": "^7.16.7",
     "@popperjs/core": "^2.11.2",
     "@types/react-helmet": "^6.1.5",
+    "babel-eslint": "^10.1.0",
     "babel-preset-gatsby": "^2.7.0",
     "core-js": "^3.21.1",
     "gatsby": "^4.7.2",
