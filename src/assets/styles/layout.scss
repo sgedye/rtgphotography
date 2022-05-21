@@ -10,6 +10,11 @@ body {
   color: hsla(0, 0%, 0%, 0.8);
 }
 
+.container, .container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 // Sticky footer
 @supports (display: grid) {
   #gatsby-focus-wrapper {

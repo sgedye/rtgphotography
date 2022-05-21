@@ -6,7 +6,7 @@ export const Footer = () => {
     <footer
       id="footer"
       className={cx(
-        "container-fluid py-3",
+        "py-3",
         css`
           border-top: 1px solid black;
           background-color: #111111dd;
