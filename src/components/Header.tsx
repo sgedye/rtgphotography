@@ -4,7 +4,7 @@ import { cx, css } from "linaria";
 import { theme } from "~/theme";
 import { Routes } from "~/models";
 
-import RtgLogo from "~/images/branding/logo.svg";
+import RtgLogo from "~/content/branding/logo.svg";
 
 export const Header = ({ siteTitle }: { siteTitle: string }) => (
   <header
