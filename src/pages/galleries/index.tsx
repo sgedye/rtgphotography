@@ -32,7 +32,7 @@ import rtg12 from "~/content/gallery-covers/rtg-12.jpg";
 
 export type GalleryListItem = {
   title: string;
-  route: string;
+  slug: string;
   coverImage: IGatsbyImageData;
 };
 
@@ -51,11 +51,11 @@ const images = [
   rtg12,
 ];
 
-export const GalleryCover = ({ title, route, coverImage }: GalleryListItem) => {
+export const GalleryCover = ({ title, slug, coverImage }: GalleryListItem) => {
   const obscuredImageOne = images[Math.floor(Math.random() * images.length)];
   const obscuredImageTwo = images[Math.floor(Math.random() * images.length)];
   return (
-    <Link to={`${Routes.Galleries}${route}`}>
+    <Link to={`${Routes.Galleries}/${slug}`}>
       <figure
         className={cx(
           "w-100 position-relative figure",
@@ -126,7 +126,7 @@ export const GalleryCover = ({ title, route, coverImage }: GalleryListItem) => {
         </div>
         <GatsbyImage
           image={coverImage}
-          alt="test cover"
+          alt={`${title} gallery`}
           className="img-fluid"
         />
 
@@ -166,13 +166,14 @@ export default function Index({ data }: { data: AllGooglePhotosData }) {
       <Seo title="Galleries" />
       <h1 className="text-uppercase text-center mb-5">Galleries</h1>
       <div className="row">
-        {data.allGooglePhotosAlbum.nodes.map(({ id, title, cover }) => {
+        {data.allGooglePhotosAlbum.nodes.map(({ id, title: slug, cover }) => {
+          const title = slug = "black-and-whites" ? "black & whites" : slug.replace(/-/g, " ");
           const coverImage = getImage(cover.file as ImageDataLike);
           return coverImage ? (
             <div key={id} className="col-12 col-md-6 col-xl-4 mb-3">
               <GalleryCover
-                title={title === "black-and-whites" ? "black & white" : title}
-                route={`/${title}`}
+                title={title}
+                slug={slug}
                 coverImage={coverImage}
               />
             </div>
