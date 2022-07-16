@@ -31,7 +31,7 @@ export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
               className={cx(
                 "d-inline-block img-fluid",
                 css`
-                  & img {
+                  & .gatsby-image-wrapper img {
                     margin: 0.5rem;
                   }
                 `
