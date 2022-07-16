@@ -128,7 +128,8 @@ $spacers: (
   2: $spacer * 0.5,
   3: $spacer,
   4: $spacer * 1.5,
-  5: $spacer * 3,
+  5: $spacer * 2,
+  6: $spacer * 3,
 );
 
 $enable-negative-margins: true !default;
@@ -282,7 +283,7 @@ $h6-font-size: $font-size-base !default;
 $headings-margin-bottom: m($spacer, 2) !default;
 $headings-font-family: "National-2", $font-family-base !default;
 $headings-font-weight: $font-weight-bold !default;
-$headings-line-height: 0.8 !default;
+$headings-line-height: 1;
 $headings-color: $secondary !default;
 
 $display1-size: clamp(3rem, 10vw, 6.5rem) !default;

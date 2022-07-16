@@ -1,33 +1,23 @@
 import { cx } from "linaria";
 import { Layout, Seo } from "~/components";
 
-import mobileImage1 from "~/images/gfx/hero-carousel/rtgphoto-001-mobile.jpg";
-import mobileImage2 from "~/images/gfx/hero-carousel/rtgphoto-002-mobile.jpg";
-import mobileImage3 from "~/images/gfx/hero-carousel/rtgphoto-003-mobile.jpg";
-import mobileImage4 from "~/images/gfx/hero-carousel/rtgphoto-004-mobile.jpg";
-import mobileImage5 from "~/images/gfx/hero-carousel/rtgphoto-005-mobile.jpg";
+import mobileImage1 from "~/content/hero-carousel/rtgphoto-001-mobile.jpg";
+import mobileImage2 from "~/content/hero-carousel/rtgphoto-002-mobile.jpg";
+import mobileImage3 from "~/content/hero-carousel/rtgphoto-003-mobile.jpg";
+import mobileImage4 from "~/content/hero-carousel/rtgphoto-004-mobile.jpg";
+import mobileImage5 from "~/content/hero-carousel/rtgphoto-005-mobile.jpg";
 
-import desktopImage1 from "~/images/gfx/hero-carousel/rtgphoto-001.jpg";
-import desktopImage2 from "~/images/gfx/hero-carousel/rtgphoto-002.jpg";
-import desktopImage3 from "~/images/gfx/hero-carousel/rtgphoto-003.jpg";
-import desktopImage4 from "~/images/gfx/hero-carousel/rtgphoto-004.jpg";
-import desktopImage5 from "~/images/gfx/hero-carousel/rtgphoto-005.jpg";
+import desktopImage1 from "~/content/hero-carousel/rtgphoto-001.jpg";
+import desktopImage2 from "~/content/hero-carousel/rtgphoto-002.jpg";
+import desktopImage3 from "~/content/hero-carousel/rtgphoto-003.jpg";
+import desktopImage4 from "~/content/hero-carousel/rtgphoto-004.jpg";
+import desktopImage5 from "~/content/hero-carousel/rtgphoto-005.jpg";
 
-import extraWideImage1 from "~/images/gfx/hero-carousel/rtgphoto-001-wide.jpg";
-import extraWideImage2 from "~/images/gfx/hero-carousel/rtgphoto-002-wide.jpg";
-import extraWideImage3 from "~/images/gfx/hero-carousel/rtgphoto-003-wide.jpg";
-import extraWideImage4 from "~/images/gfx/hero-carousel/rtgphoto-004-wide.jpg";
-import extraWideImage5 from "~/images/gfx/hero-carousel/rtgphoto-005-wide.jpg";
-
-import eth01 from "~/images/galleries/covers/Ethiopia001.jpg";
-import eth02 from "~/images/galleries/covers/Ethiopia002.jpg";
-import eth03 from "~/images/galleries/covers/Ethiopia003.jpg";
-import portI01 from "~/images/galleries/covers/PortraitsI001.jpg";
-import portI02 from "~/images/galleries/covers/PortraitsI002.jpg";
-import portI03 from "~/images/galleries/covers/PortraitsI003.jpg";
-import cub01 from "~/images/galleries/covers/Cuba001.jpg";
-import cub02 from "~/images/galleries/covers/Cuba002.jpg";
-import cub03 from "~/images/galleries/covers/Cuba003.jpg";
+import extraWideImage1 from "~/content/hero-carousel/rtgphoto-001-wide.jpg";
+import extraWideImage2 from "~/content/hero-carousel/rtgphoto-002-wide.jpg";
+import extraWideImage3 from "~/content/hero-carousel/rtgphoto-003-wide.jpg";
+import extraWideImage4 from "~/content/hero-carousel/rtgphoto-004-wide.jpg";
+import extraWideImage5 from "~/content/hero-carousel/rtgphoto-005-wide.jpg";
 
 import { GalleryCover, GalleryListItem } from "./galleries";
 import { Routes } from "~/models";
@@ -101,7 +91,7 @@ export default function Index() {
         </button>
       </div>
 
-      <section className="container">
+      {/* <section className="container">
         <div className="row mb-4 px-4">
           {GalleryList.map(gallery => (
             <div
@@ -112,7 +102,7 @@ export default function Index() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 }
@@ -155,20 +145,10 @@ const carouselImages = [
   },
 ];
 
-const GalleryList: GalleryListItem[] = [
-  {
-    title: "Ethiopia",
-    route: Routes.Ethiopia,
-    images: [eth03, eth02, eth01],
-  },
-  {
-    title: "Portraits",
-    route: Routes.Portraits,
-    images: [portI03, portI02, portI01],
-  },
-  {
-    title: "Cuba",
-    route: Routes.Cuba,
-    images: [cub03, cub02, cub01],
-  },
-];
+// const GalleryList: GalleryListItem[] = [
+//   {
+//     title: "Cuba",
+//     route: Routes.Cuba,
+//     images: [cub03, cub02, cub01],
+//   },
+// ];
