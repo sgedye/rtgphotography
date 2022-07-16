@@ -1,7 +1,8 @@
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 import { Photo } from "~/@types/google-photo";
 import { chunk, sum } from "lodash";
-import { css, cx } from "linaria";
+import { ImageModal } from "./ImageModal";
+import { useState } from "react";
 
 interface MasonaryProps {
   images: Photo[];
@@ -9,8 +10,18 @@ interface MasonaryProps {
 }
 
 export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
+  const [selectedImage, setSelectedImage] = useState<Photo | null>(null);
+
   return (
-    <>
+    <div>
+
+      <ImageModal
+        image={selectedImage}
+        onClose={() => {
+          setSelectedImage(null);
+        }}
+      />
+      
       {chunk(images, itemsPerRow).map(row => {
         const rowAspectRatioSum = sum(
           row.map(image => {
@@ -25,26 +36,27 @@ export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
           const imageAspectRatio = width / height;
           const gatsbyImage = getImage(image.file as ImageDataLike);
 
-          return gatsbyImage ? (
-            <GatsbyImage
-              key={idx}
-              className={cx(
-                "d-inline-block img-fluid",
-                css`
-                  & .gatsby-image-wrapper img {
-                    margin: 0.5rem;
-                  }
-                `
-              )}
-              style={{
-                width: `${(imageAspectRatio / rowAspectRatioSum) * 100}%`,
-              }}
-              image={gatsbyImage}
-              alt=""
-            />
-          ) : null;
+          if (gatsbyImage) {
+            return (
+              <button
+                key={idx}
+                type="button"
+                className="bg-transparent border-0 p-0"
+                onClick={() => setSelectedImage(image)}
+                style={{
+                  width: `${(imageAspectRatio / rowAspectRatioSum) * 100}%`,
+                }}
+              >
+                <GatsbyImage
+                  className="d-inline-block img-fluid"
+                  image={gatsbyImage}
+                  alt=""
+                />
+              </button>
+            );
+          }
         });
       })}
-    </>
+    </div>
   );
 };
