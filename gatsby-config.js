@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: "RTG Photography",
@@ -8,6 +10,22 @@ module.exports = {
   trailingSlash: "never",
   plugins: [
     "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-source-google-photos",
+      options: {
+        clientId: process.env.GOOGLE_OAUTH_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
+        albumsTitles: [
+          // "myanmar",
+          // "cuba",
+          // "landscapes",
+          // "portraits",
+          // "ethiopia",
+          "black-and-whites",
+          // "madagascar",
+        ],
+      },
+    },
     "gatsby-plugin-image",
     {
       resolve: "gatsby-source-filesystem",

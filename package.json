@@ -7,11 +7,11 @@
   "private": true,
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "token": "gatsby-source-google-photos-token",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
@@ -30,6 +30,7 @@
     "babel-eslint": "^10.1.0",
     "babel-preset-gatsby": "^2.7.0",
     "core-js": "^3.21.1",
+    "eslint": "^8.16.0",
     "gatsby": "^4.7.2",
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
     "gatsby-plugin-image": "^2.7.0",
@@ -42,6 +43,7 @@
     "gatsby-plugin-sharp": "^4.7.0",
     "gatsby-plugin-typescript": "^4.7.0",
     "gatsby-source-filesystem": "^4.7.0",
+    "gatsby-source-google-photos": "^3.1.1",
     "gatsby-transformer-sharp": "^4.8.0",
     "linaria": "^2.3.1",
     "prettier": "^2.5.1",
