@@ -10,7 +10,13 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
   <header
     id="header"
     className="container-fluid bg-primary py-3"
-    style={{ borderBottom: "1px solid #0000ff" }}
+    style={{
+      borderBottom: "1px solid #0000ff",
+      boxShadow: `
+        0 0 8px 0 #333,
+        inset 0 4px 6px 0 rgb(255 255 255 / 25%),
+        inset 0 -4px 6px 0 rgb(255 255 255 / 25%)`
+    }}
   >
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-dark px-0">
@@ -40,7 +46,7 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav ms-auto mt-3 mt-lg-0 gap-lg-3">
             <li className="nav-item">
               <Link
                 className="lead nav-link"

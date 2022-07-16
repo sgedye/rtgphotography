@@ -21,7 +21,7 @@ interface Node {
   cover: Photo;
 }
 
-interface Photo {
+export interface Photo {
   file: File;
 }
 

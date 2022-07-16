@@ -112,6 +112,7 @@ export const GalleryCover = ({ title, route, coverImage }: GalleryListItem) => {
             alt=""
             width={450}
             height={300}
+            className="img-fluid"
           />
         </div>
         <div>
@@ -120,6 +121,7 @@ export const GalleryCover = ({ title, route, coverImage }: GalleryListItem) => {
             alt=""
             width={450}
             height={300}
+            className="img-fluid"
           />
         </div>
         <GatsbyImage
@@ -162,6 +164,7 @@ export default function Index({ data }: { data: AllGooglePhotosData }) {
   return (
     <Layout>
       <Seo title="Galleries" />
+      <h1 className="text-uppercase text-center mb-5">Galleries</h1>
       <div className="row">
         {data.allGooglePhotosAlbum.nodes.map(({ id, title, cover }) => {
           const coverImage = getImage(cover.file as ImageDataLike);
