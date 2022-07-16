@@ -1,8 +1,6 @@
 import { Link } from "gatsby";
-import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
-import { css, cx } from "linaria";
 
-import { Layout, Loading, Masonary, Seo } from "~/components";
+import { Layout, Masonary, Seo } from "~/components";
 
 import type { GalleryProps } from "~/@types/google-photo";
 import { Routes } from "~/models";

@@ -15,6 +15,11 @@ body {
   padding-right: 15px;
 }
 
+// Gallery
+.gatsby-image-wrapper.gatsby-image-wrapper img {
+  margin: 0.5rem;
+}
+
 // Sticky footer
 @supports (display: grid) {
   #gatsby-focus-wrapper {
