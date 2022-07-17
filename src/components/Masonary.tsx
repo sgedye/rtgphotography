@@ -16,7 +16,6 @@ export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
 
   return (
     <section className="mb-5">
-      {!!initialImageId && (
         <ImageModal
           // showModal={showModal}
           selectedImageId={initialImageId || ""}
@@ -26,7 +25,6 @@ export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
             setInitialImageId(null);
           }}
         />
-      )}
 
       {chunk(images, itemsPerRow).map(row => {
         const rowAspectRatioSum = sum(
