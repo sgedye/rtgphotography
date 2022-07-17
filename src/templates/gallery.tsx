@@ -23,7 +23,9 @@ export default function Gallery({
           <span className="d-block d-md-none visually-hidden">Galleries</span>
           <span className="d-none d-md-block">&larr;&nbsp;Galleries</span>
         </Link>
-        <h1 className="text-center text-uppercase">{title.replace(/-/g, " ")}</h1>
+        <h1 className="text-center text-uppercase">
+          {title.replace(/-/g, " ")}
+        </h1>
       </div>
       <Masonary images={photos} itemsPerRow={3} />
     </Layout>

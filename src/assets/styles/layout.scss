@@ -10,6 +10,10 @@ body {
   color: hsla(0, 0%, 0%, 0.8);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .container, .container-fluid {
   padding-left: 15px;
   padding-right: 15px;

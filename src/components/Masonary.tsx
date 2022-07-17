@@ -3,6 +3,7 @@ import { Photo } from "~/@types/google-photo";
 import { chunk, sum } from "lodash";
 import { ImageModal } from "./ImageModal";
 import { useState } from "react";
+import { css, cx } from "linaria";
 
 interface MasonaryProps {
   images: Photo[];
@@ -10,18 +11,23 @@ interface MasonaryProps {
 }
 
 export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
-  const [selectedImage, setSelectedImage] = useState<Photo | null>(null);
+  // const [showModal, setShowModal] = useState<boolean>(false);
+  const [initialImageId, setInitialImageId] = useState<string | null>(null);
 
   return (
-    <div>
+    <section className="mb-5">
+      {!!initialImageId && (
+        <ImageModal
+          // showModal={showModal}
+          selectedImageId={initialImageId || ""}
+          images={images}
+          onClose={() => {
+            // setShowModal(false);
+            setInitialImageId(null);
+          }}
+        />
+      )}
 
-      <ImageModal
-        image={selectedImage}
-        onClose={() => {
-          setSelectedImage(null);
-        }}
-      />
-      
       {chunk(images, itemsPerRow).map(row => {
         const rowAspectRatioSum = sum(
           row.map(image => {
@@ -41,8 +47,18 @@ export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
               <button
                 key={idx}
                 type="button"
-                className="bg-transparent border-0 p-0"
-                onClick={() => setSelectedImage(image)}
+                className={cx(
+                  "bg-transparent border-0 p-0",
+                  css`
+                    &:focus-visible {
+                      outline: none;
+                      img {
+                        box-shadow: 0 0 0 1px white, 0 0 8px black;
+                      }
+                    }
+                  `
+                )}
+                onClick={() => setInitialImageId(image.file.childImageSharp.id)}
                 style={{
                   width: `${(imageAspectRatio / rowAspectRatioSum) * 100}%`,
                 }}
@@ -57,6 +73,6 @@ export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
           }
         });
       })}
-    </div>
+    </section>
   );
 };

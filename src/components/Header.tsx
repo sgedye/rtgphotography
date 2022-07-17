@@ -27,6 +27,9 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
               "d-flex align-items-center navbar-brand py-0",
               css`
                 text-decoration: "none";
+                &:focus-visible {
+                  outline-offset: 0.5rem;
+                }
               `
             )}
           >
