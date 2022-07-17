@@ -47,7 +47,7 @@ export default function About() {
         </div>
         <div className="col-12 col-md-4 text-center mb-3">
           <StaticImage
-            src="../images/gfx/the-artist.png"
+            src="../content/the-artist.png"
             width={300}
             quality={95}
             formats={["auto", "webp", "avif"]}

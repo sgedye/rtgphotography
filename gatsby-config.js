@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: "RTG Photography",
@@ -8,12 +10,28 @@ module.exports = {
   trailingSlash: "never",
   plugins: [
     "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-source-google-photos",
+      options: {
+        clientId: process.env.GOOGLE_OAUTH_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
+        albumsTitles: [
+          "myanmar",
+          "cuba",
+          "landscapes",
+          "portraits",
+          "ethiopia",
+          "black-and-whites",
+          "madagascar",
+        ],
+      },
+    },
     "gatsby-plugin-image",
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: `${__dirname}/src/images`,
+        name: "content",
+        path: `${__dirname}/src/content`,
       },
     },
     "gatsby-transformer-sharp",
@@ -33,7 +51,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: "#663399",
         display: "minimal-ui",
-        icon: "src/images/branding/favicon.png", // This path is relative to the root of the site.
+        icon: "src/content/branding/favicon.png", // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

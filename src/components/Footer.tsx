@@ -1,5 +1,5 @@
 import { css, cx } from "linaria";
-import RtgLogo from "~/images/branding/logo.svg";
+import RtgLogo from "~/content/branding/logo.svg";
 
 export const Footer = () => {
   return (

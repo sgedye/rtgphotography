@@ -41,5 +41,10 @@
 @import "~bootstrap/scss/utilities";
 // @import "~bootstrap/scss/print";
 
+// Slick Slider
+@import "~slick-carousel/slick/slick";
+@import "./custom-slick-theme";
+
 @import "./layout";
 @import "./utils";
+

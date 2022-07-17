@@ -10,9 +10,18 @@ body {
   color: hsla(0, 0%, 0%, 0.8);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .container, .container-fluid {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+// Gallery
+.gatsby-image-wrapper.gatsby-image-wrapper img {
+  margin: 0.5rem;
 }
 
 // Sticky footer
