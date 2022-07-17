@@ -1,8 +1,6 @@
 import { Link } from "gatsby";
-import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
-import { css, cx } from "linaria";
 
-import { Layout, Loading, Masonary, Seo } from "~/components";
+import { Layout, Masonary, Seo } from "~/components";
 
 import type { GalleryProps } from "~/@types/google-photo";
 import { Routes } from "~/models";
@@ -25,7 +23,9 @@ export default function Gallery({
           <span className="d-block d-md-none visually-hidden">Galleries</span>
           <span className="d-none d-md-block">&larr;&nbsp;Galleries</span>
         </Link>
-        <h1 className="text-center text-uppercase">{title.replace(/-/g, " ")}</h1>
+        <h1 className="text-center text-uppercase">
+          {title.replace(/-/g, " ")}
+        </h1>
       </div>
       <Masonary images={photos} itemsPerRow={3} />
     </Layout>

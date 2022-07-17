@@ -12,7 +12,11 @@ exports.createPages = async function ({ actions, graphql }) {
           photos {
             file {
               childImageSharp {
-                gatsbyImageData
+                id
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, JPG]
+                )
               }
             }
           }

@@ -30,6 +30,7 @@ interface File {
 }
 
 interface ChildImageSharp {
+  id: string;
   gatsbyImageData: GatsbyImageData;
 }
 

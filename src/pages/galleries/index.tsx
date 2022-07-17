@@ -108,7 +108,7 @@ export const GalleryCover = ({ title, slug, coverImage }: GalleryListItem) => {
       >
         <div>
           <img
-            src={title === "black-and-white" ? blk01 : obscuredImageOne}
+            src={slug === "black-and-whites" ? blk01 : obscuredImageOne}
             alt=""
             width={450}
             height={300}
@@ -117,7 +117,7 @@ export const GalleryCover = ({ title, slug, coverImage }: GalleryListItem) => {
         </div>
         <div>
           <img
-            src={title === "black-and-white" ? blk02 : obscuredImageTwo}
+            src={slug === "black-and-whites" ? blk02 : obscuredImageTwo}
             alt=""
             width={450}
             height={300}
@@ -167,12 +167,11 @@ export default function Index({ data }: { data: AllGooglePhotosData }) {
       <h1 className="text-uppercase text-center mb-5">Galleries</h1>
       <div className="row">
         {data.allGooglePhotosAlbum.nodes.map(({ id, title: slug, cover }) => {
-          const title = slug = "black-and-whites" ? "black & whites" : slug.replace(/-/g, " ");
           const coverImage = getImage(cover.file as ImageDataLike);
           return coverImage ? (
             <div key={id} className="col-12 col-md-6 col-xl-4 mb-3">
               <GalleryCover
-                title={title}
+                title={slug === "black-and-whites" ? "black & whites" : slug.replace(/-/g, " ")}
                 slug={slug}
                 coverImage={coverImage}
               />
