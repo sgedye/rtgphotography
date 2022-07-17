@@ -8,7 +8,7 @@ import {
 import { css, cx } from "linaria";
 
 import { theme } from "~/theme";
-import { Layout, Loading, Seo } from "~/components";
+import { Layout, Seo } from "~/components";
 
 import type { AllGooglePhotosData } from "~/@types/google-photo";
 
@@ -55,7 +55,14 @@ export const GalleryCover = ({ title, slug, coverImage }: GalleryListItem) => {
   const obscuredImageOne = images[Math.floor(Math.random() * images.length)];
   const obscuredImageTwo = images[Math.floor(Math.random() * images.length)];
   return (
-    <Link to={`${Routes.Galleries}/${slug}`}>
+    <Link
+      to={`${Routes.Galleries}/${slug}`}
+      className={css`
+        &:focus-visible {
+          filter: drop-shadow(0px 0px 6px ${theme.primary});
+        }
+      `}
+    >
       <figure
         className={cx(
           "w-100 position-relative figure",
@@ -171,7 +178,11 @@ export default function Index({ data }: { data: AllGooglePhotosData }) {
           return coverImage ? (
             <div key={id} className="col-12 col-md-6 col-xl-4 mb-3">
               <GalleryCover
-                title={slug === "black-and-whites" ? "black & whites" : slug.replace(/-/g, " ")}
+                title={
+                  slug === "black-and-whites"
+                    ? "black & whites"
+                    : slug.replace(/-/g, " ")
+                }
                 slug={slug}
                 coverImage={coverImage}
               />

@@ -19,7 +19,7 @@ import extraWideImage3 from "~/content/hero-carousel/rtgphoto-003-wide.jpg";
 import extraWideImage4 from "~/content/hero-carousel/rtgphoto-004-wide.jpg";
 import extraWideImage5 from "~/content/hero-carousel/rtgphoto-005-wide.jpg";
 
-import { GalleryCover, GalleryListItem } from "./galleries";
+import { GalleryAlbum } from "~/components";
 import { Routes } from "~/models";
 
 export default function Index() {
@@ -98,7 +98,7 @@ export default function Index() {
               key={gallery.title}
               className="col-12 col-md-6 col-xl-4 p-4 mb-3"
             >
-              <GalleryCover {...gallery} />
+              <GalleryAlbum {...gallery} />
             </div>
           ))}
         </div>

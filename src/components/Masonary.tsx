@@ -4,6 +4,7 @@ import { chunk, sum } from "lodash";
 import { ImageModal } from "./ImageModal";
 import { useState } from "react";
 import { css, cx } from "linaria";
+import { theme } from "~/theme";
 
 interface MasonaryProps {
   images: Photo[];
@@ -11,20 +12,15 @@ interface MasonaryProps {
 }
 
 export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
-  // const [showModal, setShowModal] = useState<boolean>(false);
   const [initialImageId, setInitialImageId] = useState<string | null>(null);
 
   return (
     <section className="mb-5">
-        <ImageModal
-          // showModal={showModal}
-          selectedImageId={initialImageId || ""}
-          images={images}
-          onClose={() => {
-            // setShowModal(false);
-            setInitialImageId(null);
-          }}
-        />
+      <ImageModal
+        selectedImageId={initialImageId || ""}
+        images={images}
+        onClose={() => setInitialImageId(null)}
+      />
 
       {chunk(images, itemsPerRow).map(row => {
         const rowAspectRatioSum = sum(
@@ -51,7 +47,8 @@ export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
                     &:focus-visible {
                       outline: none;
                       img {
-                        box-shadow: 0 0 0 1px white, 0 0 8px black;
+                        box-shadow: 0 0 0 1px ${theme.white},
+                          0 0 8px ${theme.black};
                       }
                     }
                   `

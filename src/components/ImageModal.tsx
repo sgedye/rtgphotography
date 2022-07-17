@@ -1,14 +1,8 @@
-import {
-  GatsbyImage,
-  getImage,
-  IGatsbyImageData,
-  ImageDataLike,
-} from "gatsby-plugin-image";
 import { cx } from "linaria";
-import { useEffect, useRef, useState } from "react";
-import { Photo } from "~/@types/google-photo";
-import Slider from "react-slick";
+import { useEffect } from "react";
 import { ImageCarousel } from "./ImageCarousel";
+
+import { Photo } from "~/@types/google-photo";
 
 interface ImageModalProps {
   onClose: () => void;
@@ -18,8 +12,8 @@ interface ImageModalProps {
 
 export const ImageModal = (props: ImageModalProps) => {
   const { selectedImageId, images } = props;
-         
-  const showModal = !!selectedImageId
+
+  const showModal = !!selectedImageId;
   const imageIdList = images.map(image => image.file.childImageSharp.id);
 
   useEffect(() => {
@@ -45,8 +39,16 @@ export const ImageModal = (props: ImageModalProps) => {
       <div className="modal-dialog modal-fullscreen">
         {(() => {
           if (showModal) {
-            const slide = imageIdList.findIndex(imageId => imageId === selectedImageId) || 0;
-            return <ImageCarousel {...props} initialSlide={slide} numberSlides={imageIdList.length} />;
+            const initialSlide =
+              imageIdList.findIndex(imageId => imageId === selectedImageId) ||
+              0;
+            return (
+              <ImageCarousel
+                {...props}
+                initialSlide={initialSlide}
+                numberSlides={imageIdList.length}
+              />
+            );
           }
         })()}
       </div>

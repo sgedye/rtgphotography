@@ -3,8 +3,8 @@ export * from "./Footer";
 export * from "./Layout";
 export * from "./SEO";
 
-export * from "./Quote";
-export * from "./Loading";
-export * from "./Masonary";
+export * from "./GalleryAlbum"
 export * from "./ImageCarousel";
 export * from "./ImageModal";
+export * from "./Masonary";
+export * from "./Quote";
