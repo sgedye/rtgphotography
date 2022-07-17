@@ -1,20 +1,10 @@
-import { graphql, Link } from "gatsby";
-import {
-  GatsbyImage,
-  getImage,
-  IGatsbyImageData,
-  ImageDataLike,
-} from "gatsby-plugin-image";
+import { Link } from "gatsby";
 import { css, cx } from "linaria";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 import { theme } from "~/theme";
-import { Layout, Seo } from "~/components";
-
-import type { AllGooglePhotosData } from "~/@types/google-photo";
-
 import { Routes } from "~/models";
 
-// Cover Images
 import blk01 from "~/content/gallery-covers/black-and-white-1.jpg";
 import blk02 from "~/content/gallery-covers/black-and-white-2.jpg";
 import rtg01 from "~/content/gallery-covers/rtg-01.jpg";
@@ -30,8 +20,7 @@ import rtg10 from "~/content/gallery-covers/rtg-10.jpg";
 import rtg11 from "~/content/gallery-covers/rtg-11.jpg";
 import rtg12 from "~/content/gallery-covers/rtg-12.jpg";
 
-export type GalleryListItem = {
-  title: string;
+export type GalleryAlbumProps = {
   slug: string;
   coverImage: IGatsbyImageData;
 };
@@ -51,7 +40,11 @@ const images = [
   rtg12,
 ];
 
-export const GalleryCover = ({ title, slug, coverImage }: GalleryListItem) => {
+export const GalleryAlbum = ({
+  slug,
+  coverImage,
+}: GalleryAlbumProps) => {
+  const title = slug === "black-and-whites" ? "black & whites" : slug.replace(/-/g, " ");
   const obscuredImageOne = images[Math.floor(Math.random() * images.length)];
   const obscuredImageTwo = images[Math.floor(Math.random() * images.length)];
   return (
@@ -166,48 +159,3 @@ export const GalleryCover = ({ title, slug, coverImage }: GalleryListItem) => {
     </Link>
   );
 };
-
-export default function Index({ data }: { data: AllGooglePhotosData }) {
-  return (
-    <Layout>
-      <Seo title="Galleries" />
-      <h1 className="text-uppercase text-center mb-5">Galleries</h1>
-      <div className="row">
-        {data.allGooglePhotosAlbum.nodes.map(({ id, title: slug, cover }) => {
-          const coverImage = getImage(cover.file as ImageDataLike);
-          return coverImage ? (
-            <div key={id} className="col-12 col-md-6 col-xl-4 mb-3">
-              <GalleryCover
-                title={
-                  slug === "black-and-whites"
-                    ? "black & whites"
-                    : slug.replace(/-/g, " ")
-                }
-                slug={slug}
-                coverImage={coverImage}
-              />
-            </div>
-          ) : null;
-        })}
-      </div>
-    </Layout>
-  );
-}
-
-export const pageQuery = graphql`
-  query {
-    allGooglePhotosAlbum {
-      nodes {
-        id
-        title
-        cover {
-          file {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, JPG])
-            }
-          }
-        }
-      }
-    }
-  }
-`;
