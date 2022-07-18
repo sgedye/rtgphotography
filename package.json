@@ -24,8 +24,8 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.6",
-    "@babel/plugin-transform-runtime": "^7.18.6",
+    "@babel/core": "^7.18.9",
+    "@babel/plugin-transform-runtime": "^7.18.9",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@popperjs/core": "^2.11.5",
@@ -33,8 +33,8 @@
     "@types/react-slick": "^0.23.10",
     "babel-eslint": "^10.1.0",
     "babel-preset-gatsby": "^2.18.1",
-    "core-js": "^3.21.4",
-    "eslint": "^8.19.0",
+    "core-js": "^3.23.5",
+    "eslint": "^8.20.0",
     "gatsby": "^4.18.2",
     "gatsby-plugin-gatsby-cloud": "^4.18.1",
     "gatsby-plugin-image": "^2.18.1",
