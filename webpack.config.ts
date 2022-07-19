@@ -5,9 +5,7 @@ const isProd = false;
 
 module.exports = {
   entry: {
-    main: [
-      path.resolve(__dirname, "../src/index.tsx"),
-    ],
+    main: [path.resolve(__dirname, "../src/index.tsx")],
   },
   mode: isProd ? "production" : "development",
   output: {
@@ -30,9 +28,11 @@ module.exports = {
             loader: "babel-loader",
             options: {
               presets: ["@babel/preset-env"],
-              plugins: ["@babel/plugin-proposal-class-properties"]
-            }
-          }, "ts-loader"],
+              plugins: ["@babel/plugin-proposal-class-properties"],
+            },
+          },
+          "ts-loader",
+        ],
         include: [path.resolve(__dirname, "../src")],
       },
       {

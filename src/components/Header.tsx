@@ -15,7 +15,7 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
       boxShadow: `
         0 0 8px 0 #333,
         inset 0 4px 6px 0 rgb(255 255 255 / 25%),
-        inset 0 -4px 6px 0 rgb(255 255 255 / 25%)`
+        inset 0 -4px 6px 0 rgb(255 255 255 / 25%)`,
     }}
   >
     <div className="container">

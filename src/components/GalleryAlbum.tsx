@@ -40,11 +40,9 @@ const images = [
   rtg12,
 ];
 
-export const GalleryAlbum = ({
-  slug,
-  coverImage,
-}: GalleryAlbumProps) => {
-  const title = slug === "black-and-whites" ? "black & whites" : slug.replace(/-/g, " ");
+export const GalleryAlbum = ({ slug, coverImage }: GalleryAlbumProps) => {
+  const title =
+    slug === "black-and-whites" ? "black & whites" : slug.replace(/-/g, " ");
   const obscuredImageOne = images[Math.floor(Math.random() * images.length)];
   const obscuredImageTwo = images[Math.floor(Math.random() * images.length)];
   return (

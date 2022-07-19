@@ -38,4 +38,4 @@ export const theme = {
 
   // fontSizeLg: string;
   // fontSizeSm: string;
-}
+};

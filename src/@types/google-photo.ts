@@ -58,6 +58,3 @@ interface Fallback {
   srcSet: string;
   sizes: string;
 }
-
-
-
