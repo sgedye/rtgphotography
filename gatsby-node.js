@@ -15,7 +15,6 @@ exports.createPages = async function ({ actions, graphql }) {
                 id
                 gatsbyImageData(
                   placeholder: BLURRED
-                  formats: [AUTO, WEBP, JPG]
                 )
               }
             }
