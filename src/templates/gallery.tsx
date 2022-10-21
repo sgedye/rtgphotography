@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 
-import { Layout, Masonary, Seo } from "~/components";
+import { Fancybox, Layout, Masonary, Seo } from "~/components";
 
 import type { GalleryProps } from "~/@types/google-photo";
 import { Routes } from "~/models";
@@ -11,9 +11,10 @@ export default function Gallery({
   pageContext: GalleryProps;
 }) {
   const { photos, title } = pageContext.album;
+  const titleWithSpaces = title.replace(/-/g, " ");
   return (
     <Layout>
-      <Seo title={`${title} gallery`} />
+      <Seo title={`${titleWithSpaces} gallery`} />
       <div className="position-relative mb-5">
         <Link
           to={Routes.Galleries}
@@ -23,11 +24,11 @@ export default function Gallery({
           <span className="d-block d-md-none visually-hidden">Galleries</span>
           <span className="d-none d-md-block">&larr;&nbsp;Galleries</span>
         </Link>
-        <h1 className="text-center text-uppercase">
-          {title.replace(/-/g, " ")}
-        </h1>
+        <h1 className="text-center text-uppercase">{titleWithSpaces}</h1>
       </div>
-      <Masonary images={photos} itemsPerRow={3} />
+      <Fancybox options={{ infinite: true }}>
+        <Masonary images={photos} itemsPerRow={3} />
+      </Fancybox>
     </Layout>
   );
 }

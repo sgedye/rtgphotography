@@ -5,7 +5,6 @@ import { ImageModal } from "./ImageModal";
 import { useState } from "react";
 import { css, cx } from "linaria";
 import { theme } from "~/theme";
-import { Fancybox } from ".";
 
 interface MasonaryProps {
   images: Photo[];
@@ -17,25 +16,23 @@ export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
 
   return (
     <section id="popup-gallery" className="z-gallery">
-      <Fancybox options={{ infinite: true }}>
-        {images.map(image => {
-          const gatsbyImage = getImage(image.file as ImageDataLike);
+      {images.map(image => {
+        const gatsbyImage = getImage(image.file as ImageDataLike);
 
-          if (gatsbyImage) {
-            return (
-              <GatsbyImage
-                key={image.file.childImageSharp.id}
-                data-fancybox="gallery"
-                className="d-inline-block img-fluid"
-                image={gatsbyImage}
-                alt="r-t-g photo"
-              />
-            );
-          }
+        if (gatsbyImage) {
+          return (
+            <GatsbyImage
+              key={image.file.childImageSharp.id}
+              data-fancybox="gallery"
+              className="d-inline-block img-fluid"
+              image={gatsbyImage}
+              alt="r-t-g photo"
+            />
+          );
+        }
 
-          return null;
-        })}
-      </Fancybox>
+        return null;
+      })}
     </section>
   );
 
