@@ -12,7 +12,7 @@ export default function Galleries({ data }: { data: AllGooglePhotosData }) {
       <h1 className="text-uppercase text-center mb-5">Galleries</h1>
       <div className="row">
         {data.allGooglePhotosAlbum.nodes.map(({ id, title: slug, cover }) => {
-          const coverImage = getImage(cover.file as ImageDataLike);
+          const coverImage = getImage(cover?.file as ImageDataLike);
           return coverImage ? (
             <div key={id} className="col-12 col-md-6 col-xl-4 mb-3">
               <GalleryAlbum slug={slug} coverImage={coverImage} />
