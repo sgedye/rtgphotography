@@ -9,6 +9,21 @@ module.exports = {
   },
   trailingSlash: "never",
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["GTM-KB2H6J8"],
+        gtagConfig: {
+          optimize_id: "OPT_CONTAINER_ID",
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+        },
+      },
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-google-photos",
