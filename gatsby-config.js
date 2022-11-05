@@ -5,14 +5,14 @@ module.exports = {
     title: "RTG Photography",
     description: "RTG Photography",
     author: "Shaun Gedye",
-    siteUrl: "https://www.rtgphotography.com.au",
+    siteUrl: "https://rtgphotography.com.au",
   },
   trailingSlash: "never",
   plugins: [
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ["GTM-KB2H6J8"],
+        trackingIds: ["GTM-KB2H6J8", "G-GXWD73FTJS", "G-083XKWRXPW"],
         gtagConfig: {
           optimize_id: "OPT_CONTAINER_ID",
           anonymize_ip: true,
