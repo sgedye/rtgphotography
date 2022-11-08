@@ -15,19 +15,23 @@ export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
   // const [initialImageId, setInitialImageId] = useState<string | null>(null);
 
   return (
-    <section id="popup-gallery" className="z-gallery">
+    <section id="popup-gallery" className="row">
       {images.map(image => {
         const gatsbyImage = getImage(image.file as ImageDataLike);
 
         if (gatsbyImage) {
           return (
-            <GatsbyImage
+            <div
+              className="col-md-6 col-xl-4 mb-3"
               key={image.file.childImageSharp.id}
-              data-fancybox="gallery"
-              className="d-inline-block img-fluid"
-              image={gatsbyImage}
-              alt="r-t-g photo"
-            />
+            >
+              <GatsbyImage
+                data-fancybox="gallery"
+                className="d-inline-block img-fluid"
+                image={gatsbyImage}
+                alt="r-t-g photo"
+              />
+            </div>
           );
         }
 
