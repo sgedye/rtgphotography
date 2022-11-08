@@ -32,8 +32,9 @@ export const pageQuery = graphql`
         title
         cover {
           file {
+            id
             childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, JPG])
+              gatsbyImageData(placeholder: BLURRED)
             }
           }
         }
