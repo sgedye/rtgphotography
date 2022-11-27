@@ -21,15 +21,25 @@ import extraWideImage5 from "~/content/hero-carousel/rtgphoto-005-wide.jpg";
 
 import { GalleryAlbum } from "~/components";
 import { Routes } from "~/models";
+import { graphql, Link } from "gatsby";
+import { AllGooglePhotosData } from "~/@types/google-photo";
+import { getImage, ImageDataLike } from "gatsby-plugin-image";
 
-export default function Index() {
+export default function Index({ data }: { data: AllGooglePhotosData }) {
+  const galleriesToDisplay = data.allGooglePhotosAlbum.nodes.filter(n => {
+    if (n.title === "yangon" || n.title === "cuba" || n.title === "tokyo") {
+      return n;
+    }
+    return null;
+  });
+
   return (
     <Layout title="home">
       <Seo title="Home" />
 
-      <div
+      <section
         id="carousel-homepage"
-        className="carousel slide"
+        className="carousel slide mb-5"
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">
@@ -89,23 +99,47 @@ export default function Index() {
           ></span>
           <span className="visually-hidden">Next</span>
         </button>
-      </div>
+      </section>
 
-      {/* <section className="container">
-        <div className="row mb-4 px-4">
-          {GalleryList.map(gallery => (
-            <div
-              key={gallery.title}
-              className="col-12 col-md-6 col-xl-4 p-4 mb-3"
-            >
-              <GalleryAlbum {...gallery} />
-            </div>
-          ))}
+      <section className="container py-3">
+        <h1 className="text-center mb-5">View popular galleries</h1>
+        <div className="row">
+          {galleriesToDisplay.map(({ id, title: slug, cover }) => {
+            const coverImage = getImage(cover?.file as ImageDataLike);
+            return coverImage ? (
+              <div key={id} className="col-12 col-md-6 col-xl-4 mb-3">
+                <GalleryAlbum slug={slug} coverImage={coverImage} />
+              </div>
+            ) : null;
+          })}
         </div>
-      </section> */}
+      </section>
+
+      <section className="container text-center">
+        <Link to={Routes.Galleries} className="btn btn-lg btn-outline-secondary">View all galleries</Link>
+      </section>
     </Layout>
   );
 }
+
+export const pageQuery = graphql`
+  query {
+    allGooglePhotosAlbum {
+      nodes {
+        id
+        title
+        cover {
+          file {
+            id
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 const carouselImages = [
   {
@@ -144,11 +178,3 @@ const carouselImages = [
     extraWideImage: extraWideImage5,
   },
 ];
-
-// const GalleryList: GalleryListItem[] = [
-//   {
-//     title: "Cuba",
-//     route: Routes.Cuba,
-//     images: [cub03, cub02, cub01],
-//   },
-// ];

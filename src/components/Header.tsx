@@ -41,14 +41,14 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
+          data-bs-target="#mobileNavbarToggler"
+          aria-controls="mobileNavbarToggler"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <div className="collapse navbar-collapse" id="mobileNavbarToggler">
           <ul className="navbar-nav ms-auto mt-3 mt-lg-0 gap-lg-3">
             <li className="nav-item">
               <Link
