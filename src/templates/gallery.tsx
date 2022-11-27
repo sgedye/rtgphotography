@@ -32,7 +32,7 @@ export default function Gallery({
       <div className="position-relative mb-5">
         <Link
           to={Routes.Galleries}
-          className="position-absolute btn btn-outline-primary"
+          className="position-absolute btn btn-outline-secondary"
         >
           <span className="d-md-none">&larr;</span>
           <span className="d-block d-md-none visually-hidden">Galleries</span>

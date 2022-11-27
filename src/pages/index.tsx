@@ -101,9 +101,9 @@ export default function Index({ data }: { data: AllGooglePhotosData }) {
         </button>
       </section>
 
-      <section className="container py-3">
-        <h1 className="text-center mb-5">View popular galleries</h1>
-        <div className="row">
+      <section className="container">
+        <h1 className="text-center pt-3 mb-5">View popular galleries</h1>
+        <div className="row mb-3">
           {galleriesToDisplay.map(({ id, title: slug, cover }) => {
             const coverImage = getImage(cover?.file as ImageDataLike);
             return coverImage ? (
@@ -115,7 +115,7 @@ export default function Index({ data }: { data: AllGooglePhotosData }) {
         </div>
       </section>
 
-      <section className="container text-center">
+      <section className="container text-center mb-5">
         <Link to={Routes.Galleries} className="btn btn-lg btn-outline-secondary">View all galleries</Link>
       </section>
     </Layout>
