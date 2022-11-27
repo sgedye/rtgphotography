@@ -7,5 +7,4 @@ export * from "./GalleryAlbum";
 export * from "./ImageCarousel";
 export * from "./ImageModal";
 export * from "./Fancybox";
-export * from "./Masonary";
 export * from "./Quote";
