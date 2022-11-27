@@ -29,7 +29,7 @@ export default function Index() {
 
       <div
         id="carousel-homepage"
-        className="carousel slide mb-4"
+        className="carousel slide"
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">

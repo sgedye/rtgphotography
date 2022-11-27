@@ -19,7 +19,7 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
     }}
   >
     <div className="container">
-      <nav className="navbar navbar-expand-lg navbar-dark px-0">
+      <nav className="navbar navbar-expand-lg navbar-dark p-0">
         <h1 className="mb-0">
           <Link
             to="/"
@@ -33,7 +33,7 @@ export const Header = ({ siteTitle }: { siteTitle: string }) => (
               `
             )}
           >
-            <RtgLogo width={80} height={80} />
+            <RtgLogo width={60} height={60} />
             <span className="d-none d-sm-block ms-3">{siteTitle}</span>
           </Link>
         </h1>

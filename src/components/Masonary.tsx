@@ -1,18 +1,44 @@
-import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
+import {
+  GatsbyImage,
+  getImage,
+  ImageDataLike,
+  IGatsbyImageData,
+} from "gatsby-plugin-image";
 import { Photo } from "~/@types/google-photo";
 import { chunk, sum } from "lodash";
 import { ImageModal } from "./ImageModal";
 import { useState } from "react";
 import { css, cx } from "linaria";
 import { theme } from "~/theme";
+import Gallery from "react-photo-gallery";
 
 interface MasonaryProps {
   images: Photo[];
   itemsPerRow: number;
 }
 
+
+// React-photo gallery looks great... but with basic src/width/height only.
+//  - Could add in isViewerOpen (then show thumbs / full images)
+//  - Separate arrays for 'thumbs' and big images.
+//  - Columns look nice.
+
+
+// Gatsby-image-galllery is square, but uses gatsby images -- no good.
+
+
 export const Masonary = ({ images, itemsPerRow }: MasonaryProps) => {
   // const [initialImageId, setInitialImageId] = useState<string | null>(null);
+
+  // const gatsbyImages = images.map(img => {
+  //   return getImage(img.file as ImageDataLike)
+  // }).filter(img => !!img);
+  
+  // return (
+  //   <section id="popup-gallery">
+  //     <Gallery photos={gatsbyImages} />
+  //   </section>
+  // )
 
   return (
     <section id="popup-gallery" className="row">
