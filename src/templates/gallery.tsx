@@ -13,7 +13,7 @@ export default function Gallery({
 }) {
   const { photos, title } = pageContext.album;
   const titleWithSpaces = title.replace(/-/g, " ");
-  const reactPhotos = photos.map(({ file }) => {
+  const reactPhotos = photos.filter(n => !!n.file).map(({ file }) => {
     const { height, images, width } = file.childImageSharp.gatsbyImageData;
 
     return {
