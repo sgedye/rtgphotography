@@ -44,7 +44,11 @@ body.modal-open {
   }
 }
 
-[data-fancybox="gallery"] {
-  cursor: zoom-in;
+.react-photo-gallery--gallery > div {
+  margin: -8px;
+  
+  img {
+    cursor: zoom-in;
+  }
 }
 

@@ -2,7 +2,7 @@
   "name": "rtg-photography",
   "description": "RTG Photography",
   "author": "Shaun Gedye",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "UNLICENCED",
   "private": true,
   "scripts": {
@@ -21,6 +21,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "react-photo-gallery": "^8.0.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
   },

@@ -12,9 +12,11 @@ interface FancyboxProps {
 export const Fancybox = ({ delegate, options, children }: FancyboxProps) => {
 
   useEffect(() => {
-    const opts = options || {};
-
-    NativeFancybox.bind(delegate || "[data-fancybox]", opts);
+    
+    NativeFancybox.bind(".react-photo-gallery--gallery img", {
+      ...options,
+      groupAll: true
+    });
 
     return () => {
       NativeFancybox.destroy();

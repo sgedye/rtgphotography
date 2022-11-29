@@ -110,7 +110,7 @@ export const GalleryAlbum = ({ slug, coverImage }: GalleryAlbumProps) => {
             alt=""
             width={450}
             height={300}
-            className="img-fluid"
+            className="w-100 img-fluid"
           />
         </div>
         <div>
@@ -119,7 +119,7 @@ export const GalleryAlbum = ({ slug, coverImage }: GalleryAlbumProps) => {
             alt=""
             width={450}
             height={300}
-            className="img-fluid"
+            className="w-100 img-fluid"
           />
         </div>
         <GatsbyImage
