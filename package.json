@@ -64,5 +64,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sgedye/rtgphotography"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
