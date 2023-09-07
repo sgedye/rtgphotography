@@ -2,7 +2,7 @@
   "name": "rtg-photography",
   "description": "RTG Photography",
   "author": "Shaun Gedye",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "license": "UNLICENCED",
   "private": true,
   "scripts": {
@@ -37,21 +37,21 @@
     "babel-preset-gatsby": "^2.18.1",
     "core-js": "^3.23.5",
     "eslint": "^8.20.0",
-    "gatsby": "^4.18.2",
-    "gatsby-plugin-gatsby-cloud": "^4.18.1",
-    "gatsby-plugin-google-gtag": "^4.24.0",
-    "gatsby-plugin-image": "^2.18.1",
+    "gatsby": "^4.25.7",
+    "gatsby-plugin-gatsby-cloud": "^4.25.0",
+    "gatsby-plugin-google-gtag": "^4.25.0",
+    "gatsby-plugin-image": "^2.25.0",
     "gatsby-plugin-linaria": "^3.2.0",
-    "gatsby-plugin-manifest": "^4.18.1",
-    "gatsby-plugin-offline": "^5.18.1",
-    "gatsby-plugin-react-helmet": "^5.18.0",
-    "gatsby-plugin-react-svg": "^3.1.0",
-    "gatsby-plugin-sass": "^5.18.1",
-    "gatsby-plugin-sharp": "^4.18.1",
-    "gatsby-plugin-typescript": "^4.18.1",
-    "gatsby-source-filesystem": "^4.18.1",
+    "gatsby-plugin-manifest": "^4.25.0",
+    "gatsby-plugin-offline": "^5.25.0",
+    "gatsby-plugin-react-helmet": "^5.25.0",
+    "gatsby-plugin-react-svg": "^3.3.0",
+    "gatsby-plugin-sass": "^5.25.0",
+    "gatsby-plugin-sharp": "^4.25.1",
+    "gatsby-plugin-typescript": "^4.25.0",
+    "gatsby-source-filesystem": "^4.25.0",
     "gatsby-source-google-photos": "^3.1.1",
-    "gatsby-transformer-sharp": "^4.18.1",
+    "gatsby-transformer-sharp": "^4.25.0",
     "linaria": "^2.3.1",
     "prettier": "^2.7.1",
     "sass": "^1.53.0",
@@ -64,5 +64,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sgedye/rtgphotography"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }

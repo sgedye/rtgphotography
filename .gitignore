@@ -70,3 +70,5 @@ yarn-error.log
 
 # Linaria
 .linaria-cache
+
+_public*/**/*

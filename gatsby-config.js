@@ -31,6 +31,7 @@ module.exports = {
         clientId: process.env.GOOGLE_OAUTH_CLIENT_ID,
         clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
         albumsTitles: [
+          "china",
           "chin-state",
           "colombia",
           "cuba",
